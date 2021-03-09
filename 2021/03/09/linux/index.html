@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, BLOG">
+    <meta name="keywords" content="Linux命令, BLOG">
     <meta name="description" content="">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | BLOG</title>
+    <title>Linux命令 | BLOG</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -315,7 +315,7 @@
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title">Linux命令</h1>
                 </div>
             </div>
         </div>
@@ -443,7 +443,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-03-05
+                    2021-03-09
                 </div>
                 
 
@@ -457,14 +457,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    75
+                    713
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    2 分
                 </div>
                 
 
@@ -484,19 +484,150 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+                <h3 id="权限和指令"><a href="#权限和指令" class="headerlink" title="权限和指令"></a>权限和指令</h3><ol>
+<li>进入目录<ul>
+<li>对目录拥有x权限</li>
+<li>查阅文件名，对目录拥有r权限</li>
+</ul>
+</li>
+<li>读取文件<ul>
+<li>对目录拥有x权限</li>
+<li>对文件用于r权限</li>
+</ul>
+</li>
+<li>修改文件<ul>
+<li>对目录拥有x权限</li>
+<li>对文件拥有r，w权限</li>
+</ul>
+</li>
+<li>新建文件<ul>
+<li>对目录拥有w，x权限（要有w）</li>
+</ul>
+</li>
+</ol>
+<h3 id="文件目录管理"><a href="#文件目录管理" class="headerlink" title="文件目录管理"></a>文件目录管理</h3><h4 id="mkdir"><a href="#mkdir" class="headerlink" title="mkdir"></a>mkdir</h4><p>-p   -生成多个目录</p>
+<img src="/2021/03/09/linux/mkdir.PNG" style="zoom:80%;">
+#### ls
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<img src="/2021/03/09/linux/ls.PNG" style="zoom:80%;">
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h4 id="cp"><a href="#cp" class="headerlink" title="cp"></a>cp</h4><p>cp -d     -复制link file时复制link属性（仍为链接档），否则复制指向的文件</p>
+<p>cp -r    -递归  用于目录复制</p>
+<p>cp -i     -相同文件是否覆盖</p>
+<p>cp -p     -不用预设属性，包括复制属性（备份）</p>
+<p>cp -a      相当于-dr</p>
+<img src="/2021/03/09/linux/cp.PNG" style="zoom:80%;">
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<p>cp -l   -建立硬链接</p>
+<p>cp -s    -建立软链接（symbolic link  -&gt;）</p>
+<img src="/2021/03/09/linux/cp1.PNG" style="zoom:80%;">
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<h4 id="rm"><a href="#rm" class="headerlink" title="rm"></a>rm</h4><p>rm -r   -递归，目录删除</p>
+<p>rm -f    -无提示</p>
+<h4 id="mv"><a href="#mv" class="headerlink" title="mv"></a>mv</h4><p>更名：同目录下mv</p>
+<p>批量移动 mv  f1 f2 f3 … dir</p>
+<img src="/2021/03/09/linux/mv.PNG" style="zoom:80%;">
+
+<h4 id="basename-dirname"><a href="#basename-dirname" class="headerlink" title="basename  /  dirname"></a>basename  /  dirname</h4><p>取得文件名 / 所在目录名</p>
+<h4 id="touch"><a href="#touch" class="headerlink" title="touch"></a>touch</h4><p>1.建立新文件</p>
+<p>2.将mtime，ctime修改为当前</p>
+<ul>
+<li>mtime :  modification文件内容更改时间</li>
+<li>ctime   : status  权限和属性更改时间</li>
+<li>atime   :  access 被取用时间   </li>
+</ul>
+<img src="/2021/03/09/linux/touch.PNG" style="zoom:80%;">
+
+<img src="/2021/03/09/linux/touch1.PNG" style="zoom:80%;">
+
+<h3 id="查阅文件"><a href="#查阅文件" class="headerlink" title="查阅文件"></a>查阅文件</h3><h4 id="less"><a href="#less" class="headerlink" title="less"></a>less</h4><img src="/2021/03/09/linux/less.PNG" style="zoom: 80%;">
+
+<h4 id="od"><a href="#od" class="headerlink" title="od"></a>od</h4><img src="/2021/03/09/linux/od.PNG" style="zoom:80%;">
+
+<h3 id="搜索文件"><a href="#搜索文件" class="headerlink" title="搜索文件"></a>搜索文件</h3><h4 id="locate"><a href="#locate" class="headerlink" title="locate"></a>locate</h4><img src="/2021/03/09/linux/locate.PNG" style="zoom:80%;">
+
+<h4 id="find"><a href="#find" class="headerlink" title="find"></a>find</h4><p>文件名搜索</p>
+<p>find -name filename</p>
+<img src="/2021/03/09/linux/find3.PNG" style="zoom:80%;">
+
+<p>时间搜索</p>
+<img src="/2021/03/09/linux/find1.PNG" style="zoom:80%;">
+
+<p>使用者搜索</p>
+<img src="/2021/03/09/linux/find2.PNG" style="zoom:80%;">
+
+
+
+<h3 id="磁碟-目录容量"><a href="#磁碟-目录容量" class="headerlink" title="磁碟/目录容量"></a>磁碟/目录容量</h3><h4 id="df"><a href="#df" class="headerlink" title="df"></a>df</h4><p>列出文件系统整体磁碟使用量</p>
+<p>df -h 文件名/目录名   -显示该项所在的磁碟容量</p>
+<img src="/2021/03/09/linux/df.PNG" style="zoom:80%;">
+
+<img src="/2021/03/09/linux/df1.PNG" style="zoom:80%;">
+
+<h4 id="du"><a href="#du" class="headerlink" title="du"></a>du</h4><p>查看目录大小   du -sh</p>
+<img src="/2021/03/09/linux/du.PNG" style="zoom:80%;">
+
+<h3 id="压缩-归档"><a href="#压缩-归档" class="headerlink" title="压缩/归档"></a>压缩/归档</h3><h4 id="gzip（-gz-bzip2-bz2-xz-xz"><a href="#gzip（-gz-bzip2-bz2-xz-xz" class="headerlink" title="gzip（.gz)  /  bzip2(.bz2)  / xz(.xz)"></a>gzip（.gz)  /  bzip2(.bz2)  / xz(.xz)</h4><p>-d 解压</p>
+<img src="/2021/03/09/linux/gzip.PNG" style="zoom:80%;">
+
+<img src="/2021/03/09/linux/bzip2.PNG" style="zoom:80%;">
+
+<img src="/2021/03/09/linux/xz.PNG" style="zoom:80%;">
+
+<h4 id="tar"><a href="#tar" class="headerlink" title="tar"></a>tar</h4><p>[-z|-j|-J]  gzip|bz2|xz</p>
+<img src="/2021/03/09/linux/tar.PNG" style="zoom:80%;">
+
+<ul>
+<li>压缩+打包   c：          tar -Jcv -f filename.tar.xz 要压缩的文件或目录名</li>
+<li>查询包内文件名   t： tar -Jtv -f filename.tar.xz</li>
+<li>解压缩+解归档   x：   tar -Jxv -f filename.tar.xz -C 指定解压到哪</li>
+</ul>
+<h3 id="进程操作"><a href="#进程操作" class="headerlink" title="进程操作"></a>进程操作</h3><ul>
+<li>command &amp;   -命令放到后台运行</li>
+<li>Ctrl +Z  -前台命令停止，放于后台</li>
+<li>ps -ef  | grep processes   -查看某进程</li>
+<li>kill PID -结束进程</li>
+<li>jobs - 查看后台运行或停止的进程</li>
+<li>fg   -后台命令提到前台</li>
+<li>bg -命令放在后台运行</li>
+<li>top  -任务管理器 查看进程占用</li>
+</ul>
+<h3 id="grep"><a href="#grep" class="headerlink" title="grep"></a>grep</h3><p>搜索特定字串</p>
+<img src="/2021/03/09/linux/grep.PNG" style="zoom:80%;">
+
+<img src="/2021/03/09/linux/grep1.PNG" style="zoom:80%;">
+
+<h3 id="sort"><a href="#sort" class="headerlink" title="sort"></a>sort</h3><p>排序</p>
+<img src="/2021/03/09/linux/sort.PNG" style="zoom:80%;">
+
+<h3 id="wc"><a href="#wc" class="headerlink" title="wc"></a>wc</h3><p>计算文件行数，字数</p>
+<img src="/2021/03/09/linux/wc.PNG" style="zoom: 80%;">
+
+<h3 id="git"><a href="#git" class="headerlink" title="git"></a>git</h3><ul>
+<li>git init 将文件夹初始化为git仓库</li>
+<li>git add <file> -将工作区指定文件放入暂存区</file></li>
+<li>git status -查看工作区和暂存区状态</li>
+<li>git commit -m ‘提交原因’  -将暂存区的内容提交到仓库</li>
+<li>git log - 查看提交日志历史记录</li>
+<li>git checkout –<file> -将暂存区文件恢复到工作区</file></li>
+<li>git reset –hard HEAD^   -回到上一个版本</li>
+<li>git reset –hard <ID>  -回到指定版本</ID></li>
+<li>git reflog  -查看历史、未来版本</li>
+<li>git clone <url>  -克隆代码</url></li>
+<li>git push -将本地代码推到服务器</li>
+<li>git pull -将服务器同步到本地</li>
+</ul>
+<h3 id="mysql"><a href="#mysql" class="headerlink" title="mysql"></a>mysql</h3><ul>
+<li>systemctl start mariadb -启动数据库</li>
+<li>修改密码<ul>
+<li>​    use mysql;</li>
+<li>update user set password= password(‘123456’) where user=’root’;</li>
+<li>flush privileges;  -生效</li>
+</ul>
+</li>
+<li>mysql -u root -p    -数据库客户端root登录</li>
+<li></li>
+</ul>
 
                 
             </div>
@@ -523,7 +654,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="http://cly0103.github.io/2021/03/05/hello-world/">http://cly0103.github.io/2021/03/05/hello-world/</a>
+                    <a href="http://cly0103.github.io/2021/03/09/linux/">http://cly0103.github.io/2021/03/09/linux/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -730,9 +861,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/03/09/linux/">
                     <div class="card-image">
@@ -749,9 +881,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -760,6 +892,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
@@ -767,7 +900,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
                 <a href="/2021/03/05/hello-world/">
@@ -796,7 +929,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
