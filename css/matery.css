@@ -110,7 +110,7 @@ pre {
     content: " ";
     position: absolute;
     border-radius: 50%;
-    background: #ff5f56;
+    background: #75eba2;
     width: 12px;
     height: 12px;
     top: 0;
@@ -387,9 +387,9 @@ header .side-nav .social-link {
 }
 
 .cover-btns a:hover {
-    border: 1px solid #f44336;
-    background-color: #f44336;
-    box-shadow: 0 14px 26px -12px rgba(233, 30, 99, 0.42),
+    border: 1px solid #8be7b1;
+    background-color: #36f4a5;
+    box-shadow: 0 14px 26px -12px rgba(92, 212, 122, 0.42),
     0 4px 23px 0 rgba(0, 0, 0, 0.12),
     0 8px 10px -5px rgba(233, 30, 99, 0.2);
 }
@@ -1327,7 +1327,7 @@ thead {
 }
 
 .chip-default .tag-length {
-    color: #e91e63;
+    color: #42d39b;
     margin-top: 1px;
 }
 
